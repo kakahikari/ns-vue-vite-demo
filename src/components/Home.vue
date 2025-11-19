@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import type { Button, EventData } from "@nativescript/core";
 import { ref, computed, onMounted, onUnmounted } from "nativescript-vue";
+import { InAppBrowser } from 'nativescript-inappbrowser';
 
 declare var com: any;
 const counter = ref(0);
@@ -8,8 +9,13 @@ const message = computed(() => {
   return `Hype Counter: ${counter.value}`;
 });
 
-// HMR native platform APIs
+// HMR plugins or native platform APIs
 function enterNow(evt: EventData) {
+  InAppBrowser.open("https://viteconf.amsterdam");
+  return;
+
+  // You can also use native platform APIs directly
+  // Try commenting above and uncommenting below to see it in action
   const url = "https://viteconf.amsterdam";
   if ((evt.object as Button)?.ios) {
     const nsUrl = NSURL.URLWithString(url);
@@ -44,7 +50,7 @@ onUnmounted(() => {
 
 <template>
   <Frame>
-    <Page class="bg-[#251353]">
+    <Page class="bg-[#251353]" statusBarStyle="light">
       <ActionBar>
         <Label text="ViteConf 2025" class="font-bold text-lg" />
       </ActionBar>
