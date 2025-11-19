@@ -4,9 +4,7 @@ Play around with NativeScript Vue and Vite.
 
 https://github.com/user-attachments/assets/5fd4f6d6-d849-42b5-9437-a4c41ed9a4d5
 
-*Prerelease features coming to NativeScript v9.*
-
-Install the prerelease cli: `npm install -g nativescript@alpha`
+Install latest cli (v9+): `npm install -g nativescript@latest`
 
 Then setup the repo:
 ```
