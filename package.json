@@ -10,7 +10,8 @@
     "dev:server:android": "vite serve -- --env.android --env.hmr",
     "ios": "ns debug ios",
     "android": "ns debug android",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "clean": "ns clean"
   },
   "dependencies": {
     "@nativescript/core": "~9.0.8",

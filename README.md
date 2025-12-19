@@ -33,6 +33,12 @@ ns debug ios --no-hmr
 ns debug android --no-hmr
 ```
 
+## Clean All Temporary Files
+
+```
+npm run clean
+```
+
 ### Notes
 
 This project is configured via [nativescript.config.ts](nativescript.config.ts) to use Vite.
